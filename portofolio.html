@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>My Portofolio</title>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+
+body {
+  background: #f6aece;
+}
+
+/* HERO */
+.hero {
+  background: #e773ad;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h2 {
+  font-size: 32px;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #ff9cc8;
+}
+
+.navbar li a:hover,
+.navbar .active a {
+  background: #e773ad;
+  border-radius: 8px;
+}
+
+
+/* CONTENT */
+.content {
+  padding: 60px 20px;
+}
+
+/* CARD PROJECT */
+.card-project {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  height: 100%; /* Agar tinggi kartu sama */
+}
+
+.card-project:hover {
+  transform: translateY(-8px);
+}
+
+.card-project img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.card-project h5 {
+  margin-top: 15px;
+  color: #e773ad;
+  font-size: 18px;
+}
+
+/* WRAPPER BADGE - Diperbaiki */
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Membuat lencana ke tengah */
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.badge-custom {
+  background-color: #e7c3ff;
+  color: #ff0080;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* FOOTER */
+.footer-pink {
+  background: #e773ad;
+  text-align: center;
+  color: white;
+  padding: 35px 15px;
+}
+
+.footer-pink a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.navbar .nav-link {
+  font-weight: 700 !important;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="modal fade" id="imageModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <img id="modalImg" class="w-100 rounded" alt="Preview">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hero">
+  <h2>Karya / Project</h2>
+  <p>Berisi daftar project.</p>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+      <ul class="navbar-nav gap-3">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+        <a class="nav-link active" href="portofolio.html">Portofolio</a>
+        <li class="nav-item"><a class="nav-link" href="galeri.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="informasi.html">Informasi</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card-project">
+          <img src="ss1 (1).png" onclick="openImage(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <h5>Website Profil</h5>
+          <div class="wrapper">
+            <span class="badge-custom">HTML</span>
+            <span class="badge-custom">CSS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-project">
+          <img src="ss1 (2).png" onclick="openImage(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <h5>Website Paragraph</h5>
+          <div class="wrapper">
+            <span class="badge-custom">HTML</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-project">
+          <img src="ss1 (3).png" onclick="openImage(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <h5>Website Unpam</h5>
+          <div class="wrapper">
+            <span class="badge-custom">HTML</span>
+            <span class="badge-custom">CSS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-project">
+          <img src="ss1 (4).png" onclick="openImage(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <h5>Website Page</h5>
+          <div class="wrapper">
+            <span class="badge-custom">HTML</span>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-project">
+          <img src="ss1 (8).png" onclick="openImage(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <h5>Website Dasar css</h5>
+
+          <div class="wrapper">
+            <span class="badge-custom">HTML</span>
+            <span class="badge-custom">CSS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-project">
+          <img src="ss1 (5).png" onclick="openImage(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <h5>Website operator</h5>
+          <div class="wrapper">
+            <span class="badge-custom">HTML</span>
+            <span class="badge-custom">CSS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-project">
+          <img src="ss1 (11).png" onclick="openImage(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <h5 class="mt-3 fw-semibold">Website Informasi Kampus</h5>
+          <div class="wrapper">
+            <span class="badge-custom">HTML</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-project">
+          <img src="ss1 (10).png" onclick="openImage(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <h5 class="mt-3 fw-semibold">Website Profil Pribadi</h5>
+          <div class="wrapper">
+            <span class="badge-custom">HTML</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-project">
+          <img src="ss1 (7).png" onclick="openImage(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <h5>Website informasi mahasiswa</h5>
+          <div class="wrapper">
+            <span class="badge-custom">HTML</span>
+            <span class="badge-custom">CSS</span>
+          </div>
+        </div>
+      </div>
+
+      </div>
+  </div>
+</div>
+
+<footer class="footer-pink fade-up">
+  <div class="social">
+    <div class="mb-3">
+      <a href="https://wa.me/6285774150181" class="social-icon" target="_blank">WhatsApp</a>
+      <a href="https://instagram.com/lannad_ya" class="social-icon" target="_blank">Instagram</a>
+      <a href="mailto:cagivanadya@gmail.com" class="social-icon">Email</a>
+      <a href="https://github.com/cagivanadya-art" class="social-icon">GitHub</a>
+      <a href="https://discord.com/users/1373867631173439608" class="social-icon" target="_blank">Discord</a>
+    </div>
+  <p class="mt-3">© 2025 Cagiva Nadya Salsabilla</p>
+</footer>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+function openImage(src) {
+  document.getElementById("modalImg").src = src;
+}
+</script>
+
+</body>
+</html>

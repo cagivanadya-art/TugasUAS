@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f6aece;
+  }
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+  .bg-pink {
+    background-color: #ff9cc8;
+  }
+
+  /* HEADER */
+.hero {
+  background: #e773ad;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #ff9cc8;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.navbar li a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar li a:hover,
+.navbar .active a {
+  background: #e773ad;
+  border-radius: 8px;
+}
+
+
+  /* HERO */
+.hero {
+  padding: 70px 20px;
+  text-align: center;
+  background: #e773ad;
+  color: white;
+  border-radius: 0 0 40px 40px;
+}
+
+
+  .hero img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  /* FOOTER */
+  .footer-pink {
+    background: #e773ad;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 60px;
+  }
+
+  .footer-pink a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+  .footer-pink a:hover {
+    text-decoration: underline;
+  }
+  </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="foto1.jpeg" alt="Profile">
+  <h1 class="mt-4">Cagiva Nadya Salsabilla</h1>
+  <p>Web Developer | Designer | Freelancer</p>
+</section>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-pink">
+  <div class="container">
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+      <ul class="navbar-nav gap-3 text-center">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link" href="informasi.html">Informasi</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- FOOTER -->
+<footer class="footer-pink">
+  <div class="mb-3">
+    <a href="https://wa.me/6285774150181" target="_blank">WhatsApp</a>
+    <a href="https://instagram.com/lannad_ya" target="_blank">Instagram</a>
+    <a href="mailto:cagivanadya@gmail.com">Email</a>
+    <a href="https://github.com/cagivanadya-art" target="_blank">GitHub</a>
+    <a href="https://discord.com/users/1373867631173439608" target="_blank">Discord</a>
+  </div>
+  <p>© 2025 Cagiva Nadya Salsabilla</p>
+</footer>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
