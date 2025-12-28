@@ -2,146 +2,605 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Home</title>
-
-  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <title>Kelas 01SIFP007</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    background:#f6aece;
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-.hero h1 {
-  font-size: 36px;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #0f172a;
+      background: #ffffff;
+      scroll-behavior: smooth;
+    }
 
-.hero p {
-  margin-top: 10px;
-  font-size: 18px;
-}
-  .bg-pink {
-    background-color: #ff9cc8;
-  }
+    /* ===== HEADER & LOGO ===== */
+    header {
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #197bcc;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-  /* HEADER */
-.hero {
-  background: #e773ad;
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+    }
 
-/* NAVBAR */
-.navbar {
-  background: #ff9cc8;
-}
+    .logo img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
 
-.navbar ul {
+    .logo span {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 60px;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero-text h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .hero-text p {
+      line-height: 1.6;
+    }
+
+    .hero-gif img {
+      width: 420px;
+      max-width: 100%;
+    }
+
+    /* ===== SECTION ===== */
+    .section {
+      padding: 40px 60px;
+    }
+
+    /* ===== TABLE ===== */
+    .table-wrapper {
+      overflow-x: auto;
+      margin-top: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #e5e7eb;
+      text-align: left;
+    }
+
+    th {
+      background: #197bcc;
+      color: #ffffff;
+    }
+
+    td a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    td a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #0b2536;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      margin-top: 40px;
+    }
+
+    footer img {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+
+    footer h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+
+    .footer-nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    .footer-nav a:hover {
+      text-decoration: underline;
+    }
+
+    footer small {
+      display: block;
+      margin-top: 25px;
+      color: #94a3b8;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .section {
+        padding: 30px 20px;
+      }
+
+      .hero-gif img {
+        width: 280px;
+      }
+    }
+    .hero {
   display: flex;
-  justify-content: center;
-  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 80px 60px;
 }
 
-.navbar li a {
-  display: block;
-  padding: 15px 20px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+.hero-text {
+  max-width: 600px;
 }
 
-.navbar li a:hover,
-.navbar .active a {
-  background: #e773ad;
-  border-radius: 8px;
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
 }
 
-
-  /* HERO */
-.hero {
-  padding: 70px 20px;
-  text-align: center;
-  background: #e773ad;
-  color: white;
-  border-radius: 0 0 40px 40px;
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
 }
 
+.hero-image img {
+  width: 400px;
+  max-width: 100%;
+}
 
-  .hero img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid white;
-    animation: float 4s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
-  }
-
-  /* FOOTER */
-  .footer-pink {
-    background: #e773ad;
-    color: white;
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
     text-align: center;
-    padding: 30px 15px;
-    margin-top: 60px;
+    padding: 40px 20px;
   }
 
-  .footer-pink a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+  .hero-image img {
+    width: 280px;
   }
+}
 
-  .footer-pink a:hover {
-    text-decoration: underline;
-  }
   </style>
 </head>
-
 <body>
+  
+<header>
+  <div class="logo">
+    <img src="logo-unpam.png" alt="Logo UNPAM">
+    <span>Kelas 01SIFP007</span>
+  </div>
+  <nav>
+    <a href="#home">Beranda</a>
+    <a href="#anggota">Anggota</a>
+    <a href="#tentang">Tentang</a>
+  </nav>
+</header>
 
-<!-- HERO -->
-<section class="hero">
-  <img src="foto1.jpeg" alt="Profile">
-  <h1 class="mt-4">Cagiva Nadya Salsabilla</h1>
-  <p>Web Developer | Designer | Freelancer</p>
+<!-- ===== BERANDA ===== -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>Website Resmi Kelas 01SIFP007</h1>
+    <p>
+      Website Resmi Kelas 01SIFP007 Sistem Informasi  
+      Universitas Pamulang
+    </p>
+  </div>
+  <div class="hero-gif">
+    <img src="IT2.gif" alt="Ilustrasi Teknologi">
+  </div>
 </section>
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-pink">
-  <div class="container">
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navMenu">
-      <ul class="navbar-nav gap-3 text-center">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
-        <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
-        <li class="nav-item"><a class="nav-link" href="informasi.html">Informasi</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
-<!-- FOOTER -->
-<footer class="footer-pink">
-  <div class="mb-3">
-    <a href="https://wa.me/6285774150181" target="_blank">WhatsApp</a>
-    <a href="https://instagram.com/lannad_ya" target="_blank">Instagram</a>
-    <a href="mailto:cagivanadya@gmail.com">Email</a>
-    <a href="https://github.com/cagivanadya-art" target="_blank">GitHub</a>
-    <a href="https://discord.com/users/1373867631173439608" target="_blank">Discord</a>
+<!-- ===== ANGGOTA ===== -->
+<section class="section" id="anggota"> 
+  <h2>Anggota Kelas</h2>
+
+  <div class="table-wrapper"> 
+    <table>
+      <tr>
+        <th>NO</th>
+        <th>NAMA</th>
+        <th>NIM</th>
+        <th>LINK WEBSITE</th>
+        <th>PDF</th>
+      </tr>
+
+<tr>
+  <td>1</td>
+  <td>Abdillah Fathi Arrisqi</td>
+  <td>251011700404</td>
+  <td>
+    <a href="https://patih-ganteng.github.io/aku-adalah-patih/" target="_blank">
+      https://patih-ganteng.github.io/aku-adalah-patih/
+    </a>
+  </td>
+  <td>-</td>
+</tr>
+
+      <tr>
+        <td>2</td>
+        <td>Alif Arditya Saputra</td>
+        <td>251011700435</td>
+        <td><a href="https://alifarditya3-jpg.github.io/alif-arditya-s./" target="_blank">https://alifarditya3-jpg.github.io/alif-arditya-s./</a></td>
+       <td>-</td>
+      </tr>
+<tr>
+    <td>3</td>
+    <td>Andika Ardiyansah</td>
+    <td>251011700433</td>
+    <td><a href="https://example.com" target="_blank">Link Website</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>4</td>
+    <td>Aqela Hamne Apriani</td>
+    <td>251011701028</td>
+    <td><a href="https://aqelahmya.github.io/UASAQELA/" target="_blank">https://aqelahmya.github.io/UASAQELA/</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>5</td>
+    <td>Arrib Magram</td>
+    <td>251011700363</td>
+    <td><a href="https://aribmargam2-ops.github.io/buat-projek/" target="_blank">https://aribmargam2-ops.github.io/buat-projek/</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>Cagiva Nadya Salsabilla</td>
+  <td>251011700427</td>
+  <td>
+    <a href="https://cagivanadya-art.github.io/TugasUAS/" target="_blank">
+      https://cagivanadya-art.github.io/TugasUAS/
+    </a>
+  </td>
+  <td>
+    <a href="https://drive.google.com/file/d/1hOp35Z213IkKhxm3c0N7XyF3inyDSGpQ/view?usp=sharing" target="_blank">
+      Link PDF
+    </a>
+  </td>
+</tr>
+
+<tr>
+    <td>7</td>
+    <td>Dinna Nur Hasanah</td>
+    <td>251011700422</td>
+    <td>
+        <a href="https://dinnanurhasanah07-max.github.io/iHasanaa/" target="_blank">https://dinnanurhasanah07-max.github.io/iHasanaa/</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>8</td>
+    <td>Evan Angkasa Putra</td>
+    <td>251011700423</td>
+    <td>
+        <a href="https://nvstl-h1gh.github.io/evannnnnnn/" target="_blank">https://nvstl-h1gh.github.io/evannnnnnn/</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>9</td>
+    <td>Ezar Faiq Rizqi Ardianto</td>
+    <td>251011700426</td>
+    <td>
+        <a href="https://example.com" target="_blank">Link Website</a>
+    </td>
+      <td>-</td>
+    </tr>
+<tr>
+    <td>10</td>
+    <td>Hani Fitriani</td>
+    <td>251011700443</td>
+    <td>
+        <a href="https://haniftrn28.github.io/UAS/" target="_blank">https://haniftrn28.github.io/UAS/</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>11</td>
+    <td>Hanina Nurfaizah</td>
+    <td>251011700428</td>
+    <td>
+        <a href="https://github.com/haninanurfaizah/fix_portofolio_nina" target="_blank">https://github.com/haninanurfaizah/fix_portofolio_nina</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>12</td>
+    <td>Imam ardi Zaidan</td>
+    <td>251011700438</td>
+    <td>
+    <a href="https://example.com" target="_blank">Link Website</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>13</td>
+    <td>Kamelia Agustin</td>
+    <td>251011700406</td>
+    <td><a href="https://example.com" target="_blank">Link Website</a>
+    </td>
+      <td>-</td>
+</tr>
+
+<tr>
+    <td>14</td>
+    <td>Kayla Cantika</td>
+    <td>251011700395</td>
+    <td>
+        <a href="https://kaylacantika11.github.io/kyllacntkaaaa/" target="_blank">https://kaylacantika11.github.io/kyllacntkaaaa/</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>15</td>
+    <td>Kholish</td>
+    <td>251011700447</td>
+    <td>
+        <a href="https://example.com" target="_blank">Link Website</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>16</td>
+    <td>Marcella Indriani</td>
+    <td>251011700444</td>
+    <td>
+        <a href="https://example.com" target="_blank">Link Website</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>17</td>
+    <td>Muhammad Zidan Eda</td>
+    <td>251011700420</td>
+    <td>
+        <a href="https://zidan090622-hash.github.io/uas_mze.okedeh/" target="_blank">https://zidan090622-hash.github.io/uas_mze.okedeh/</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>18</td>
+    <td>Muhamad Apri Cahyadi</td>
+    <td>251011700399</td>
+    <td>
+        <a href="https://cahyadi11.github.io/UAS_Portofolio_M_Apri_Cahyadi/" target="_blank">https://cahyadi11.github.io/UAS_Portofolio_M_Apri_Cahyadi/</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>19</td>
+    <td>Muhammad Arrafi</td>
+    <td>251011700392</td>
+    <td>
+        <a href="https://zinzastrong.github.io/Portofolio-Muhamad-Arrafi/" target="_blank">https://zinzastrong.github.io/Portofolio-Muhamad-Arrafi/</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>20</td>
+    <td>Muhammad Amien Nurcahya</td>
+    <td>251011700440</td>
+    <td>
+        <a href="https://mongkiss.github.io/UAS-SMT1/" target="_blank">https://mongkiss.github.io/UAS-SMT1/ </a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>21</td>
+    <td>Muhammad Fauzan</td>
+    <td>251011701248</td>
+    <td>
+        <a href="https://example.com" target="_blank">Link Website</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>22</td>
+    <td>Muhammad Zaki Zahron</td>
+    <td>251011700411</td>
+    <td>
+        <a href="https://muhammadzakizahron-lgtm.github.io/Tugas-Projek-UAS-pweb-1/" target="_blank">https://muhammadzakizahron-lgtm.github.io/Tugas-Projek-UAS-pweb-1/</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>23</td>
+    <td>Muhammad Muyah Amirullah</td>
+    <td>251011700410</td>
+    <td>
+        <a href="https://muyahamirullah21.github.io/muyah/" target="_blank">https://muyahamirullah21.github.io/muyah/</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>24</td>
+    <td>Rananto Aji Pradana</td>
+    <td>251011700421</td>
+    <td>
+        <a href="https://ranantoajipradana697-glitch.github.io/Tugas-UAS-Portofolio/#homem" target="_blank">https://ranantoajipradana697-glitch.github.io/Tugas-UAS-Portofolio/#home</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>25</td>
+    <td>Rifal Fauzi</td>
+    <td>251011700442</td>
+    <td>
+<a href="https://example.com" target="_blank">Link Website</a>    </td>
+  <td>-</td>
+</tr>
+<tr>
+    <td>26</td>
+    <td>Ryfance Dabati Nubatonis</td>
+    <td>251011700441</td>
+    <td>
+<a href="https://example.com" target="_blank">Link Website</a>    </td>
+  <td>-</td>
+</tr>
+<tr>
+    <td>27</td>
+    <td>Seva Dhyno Fazriansyah</td>
+    <td>251011700256</td>
+    <td>
+        <a href="https://semsa467.github.io/UAS-Sistem-Informasi/" target="_blank">https://semsa467.github.io/UAS-Sistem-Informasi/</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>28</td>
+    <td>Syafikri Rahadiansyah</td>
+    <td>251011700414</td>
+    <td>
+<a href="https://syafikrirahadiansyah-create.github.io/Website-Pribadi/" target="_blank">https://syafikrirahadiansyah-create.github.io/Website-Pribadi/</a>    </td>
+  <td>-</td>
+</tr>
+
+<tr>
+    <td>29</td>
+    <td>Tias Hapsari Sasmito</td>
+    <td>251011700415</td>
+    <td>
+<a href="https://example.com" target="_blank">Link Website</a>    </td>
+  <td>-</td>
+</tr>
+
+<tr>
+    <td>30</td>
+    <td>Wisnu Setiawan</td>
+    <td>251011700434</td>
+    <td>
+        <a href="https://example.com" target="_blank">Link Website</a>
+    </td>
+    <td>-</td>
+</tr>
+
+<tr>
+    <td>31</td>
+    <td>Yulia Nurhasanah</td>
+    <td>251011700430</td>
+    <td>
+        <a href="https://example.com" target="_blank">Link Website</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>32</td>
+    <td>Yulian Indira Putra</td>
+    <td>251011700416</td>
+    <td>
+        <a href="https://example.com" target="_blank">Link Website</a>
+    </td>
+      <td>-</td>
+</tr>
+<tr>
+    <td>33</td>
+    <td>Zahra Anggraini</td>
+    <td>251011700446</td>
+    <td>
+        <a href="https://zahranggraini13.github.io/Zahra-Anggraini-251011700446---UAS/" target="_blank">https://zahranggraini13.github.io/Zahra-Anggraini-251011700446---UAS/</a>
+    </td>
+      <td>-</td>
+</tr>
+
+
+  </table>
+</div>
+</section>
+<section class="section" id="tentang">
+  <h2>Tentang Website</h2>
+  <p>
+    Website ini dibuat sebagai media pengumpulan link website tugas UAS
+    kelas 01SIFP007 sehingga dosen dapat mengakses seluruh hasil tugas
+    secara cepat.
+  </p>
+</section>
+
+<footer>
+  <img src="logo-unpam.png" alt="Logo UNPAM">
+  <h3>Kelas01SIFP007</h3>
+  <p>Website Resmi Kelas 01SIFP007 Sistem Informasi UNPAM</p>
+
+  <div class="footer-nav">
+    <a href="#home">Beranda</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#anggota">Anggota</a>
   </div>
-  <p>© 2025 Cagiva Nadya Salsabilla</p>
+
+  <small>© 2025 Kelas01SIFP007. All Rights Reserved.</small>
 </footer>
 
-<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
