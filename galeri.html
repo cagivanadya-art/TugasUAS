@@ -3,9 +3,8 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>My Portofolio</title>
-
-    <!-- Bootstrap 5.2.3 CSS -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
@@ -222,6 +221,25 @@ iframe {
   }
 }
 
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero img {
+    width: 110px;
+    height: 110px;
+  }
+}
+
 </style>
 </head>
 
@@ -242,7 +260,7 @@ iframe {
 
 <!-- HEADER -->
 <div class="hero">
-<h2>Galeri</h2>
+<h2>Media</h2>
 <p>Kumpulan foto dan dokumentasi.</p>
 
 </div>
@@ -259,7 +277,7 @@ iframe {
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
         <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="galeri.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeri.html">Media</a></li>
         <li class="nav-item"><a class="nav-link" href="informasi.html">Informasi</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
       </ul>
@@ -267,7 +285,7 @@ iframe {
   </div>
 </nav>
 <section class="galeri-section">
-  <h2 class="galeri-title">Gallery</h2>
+  <h2 class="galeri-title">Media</h2>
 
   <!-- FOTO -->
   <h4 class="mb-3">📸 Foto</h4>
@@ -314,11 +332,8 @@ iframe {
       <p>Video akuu hehe</p>
     </div>
   </div>
-
 </div>
 
-
-  <!-- AUDIO -->
 <!-- AUDIO -->
 <section id="galeri-lagu" class="py-4">
   <h4 class="mb-3">🎵 Lagu</h4>
