@@ -197,6 +197,71 @@ img {
   }
 }
 
+:root {
+  --pink-main: #e773ad;
+  --pink-soft: #fce7f3;
+  --pink-light: #ff9cc8;
+  --text-dark: #374151;
+}
+
+/* RESET */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--pink-soft);
+  color: var(--text-dark);
+}
+
+/* NAVBAR */
+.navbar {
+  background: var(--pink-light);
+}
+
+.navbar .nav-link {
+  color: white !important;
+  font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+  text-decoration: underline;
+}
+
+/* SECTION */
+.section {
+  padding: 40px 16px;
+}
+
+/* CARD */
+.card-soft {
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+/* FOOTER */
+.footer-pink {
+  background: var(--pink-main);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.footer-pink a {
+  color: white;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+.footer-pink a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+  h1 { font-size: 26px; }
+  h2 { font-size: 22px; }
+}
+
 </style>
 </head>
 
